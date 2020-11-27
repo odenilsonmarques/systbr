@@ -1,40 +1,40 @@
-/*
-.article{
-    background-color:#1E90FF; 
-    border:none;
-    margin-top: 20px;
-}
-.contatos{
-    border:1px solid thistle;
-    border-radius: 25px;
-    background-color:#e63888;
-}
-.glyphicon{
-    color:lightskyblue;
-    font-size:50px;
-   
-}
-*/
+
 hr{
     border:1px solid #1E90FF;
 }
 h3{
     color:#FFF;
 }
-
 .operacaoTapaBuraco{
-    background-color:#166ba2;
+    background-color:#4682B4;
     border:none;
+    text-align: center;
+    
 }
-
 .operacaoUsuario{
     background-color:#166ba2; 
     border:none;
+    text-align: center;
 }
-
 .operacaoTapaBuraco .operacaoUsuario img{
     margin-top: 20px;
-    margin-bottom: 240px;
+}
+
+.operacaoUsuario a{
+    text-decoration: none;
+}
+
+.operacaoUsuario:hover{
+    background-color:#2F4F4F;
+}
+
+.operacaoTapaBuraco:hover{
+    background-color:#2F4F4F;
+}
+.inforFooter{
+    margin-top: 25px;
+    color:#1E90FF;
+
 }
 /*
 th{

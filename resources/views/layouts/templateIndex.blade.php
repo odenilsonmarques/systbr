@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{('assets/css/styleHeader.css')}}">
         <link rel="stylesheet" href="{{('assets/css/styleBody.css')}}">
-        <link rel="stylesheet" href="{{('assets/css/estiloFooter.css')}}">
+        <link rel="stylesheet" href="{{('assets/css/styleFooter.css')}}">
     </head>
     <body>
         <header> 
@@ -26,6 +26,13 @@
             </div>
         </article>
         <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center inforFooter">
+                        Todos os direito reservados || Prefeitura de São Luís - MA</a><br><br>
+                    </div>
+                </div>
+            </div>
         </footer>
         <script type="text/javascript" src="{{('assets/js/jquery-3.1.1.min.js')}}"></script>
         <script type="text/javascript" src="{{('assets/js/bootstrap.min.js')}}"></script>
