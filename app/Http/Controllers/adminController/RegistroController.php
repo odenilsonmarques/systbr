@@ -11,22 +11,26 @@ class RegistroController extends Controller
         return view('adminViews.cadastro');
     }
     public function addAction(Request $request){
+        
+        //dd($request->file('anexoUm'));
+        
         $request->validate([
-            'titulo'=>['required','string','min:10'],
+            'titulo'=>['required','string','min:10','max:30'],
             'descricao'=>['required','string','min:20','max:150'],
+            'anexo'=>['required','file'],
         ]);
-
-        dd($request->file('anexoUm'));
-    
-        
+        if($request->hasFile('anexo') && $request->anexo->isValid()){
+            $anexo = $request->file('anexo')->store('imagens');
+        }
         $titulo = $request->input('titulo');
-        $descricao= $request->input('descricao');
-        
+        $descricao = $request->input('descricao');
+        $anexo = $request->input('anexo');
+
         $data = new Registro();
         $data->titulo = $titulo;
         $data->descricao = $descricao;
+        $data->anexo = $anexo;
         $data->save();
-        return redirect()->route('cadastro.add');
-        
+        return redirect()->route('cadastro.add');   
     }
 }

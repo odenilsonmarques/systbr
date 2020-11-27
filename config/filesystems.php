@@ -48,14 +48,13 @@ return [
             'driver' => 'local',
             'root' => storage_path('app'),
         ],
-        //como informei que os arquivos de vem ser salvos dentro de forma public, então trexo de codigo é responsavel por definir as configurações desse tipo de permissao
+        //como informei que os arquivos de vem ser salvos dentro de forma public, então trecho de codigo é responsavel por definir as configurações desse tipo de permissao
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

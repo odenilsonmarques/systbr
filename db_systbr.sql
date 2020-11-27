@@ -24,7 +24,9 @@ CREATE TABLE IF NOT EXISTS `registros` (
   `anexo` varchar(200) DEFAULT NULL,
   `localizacao` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=UTF8MB4;
+
+SELECT *FROM registros;
 
 -- Exportação de dados foi desmarcado.
 

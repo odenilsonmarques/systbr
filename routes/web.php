@@ -14,9 +14,8 @@
 Route::get('/cadastro','adminController\RegistroController@add')->name('cadastro.add');
 Route::post('/cadastro','adminController\RegistroController@addAction');
 
-
-
+Route::get('/lista','adminController\RegistroController@list')->name('lista.list');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('adminViews.index');
 });

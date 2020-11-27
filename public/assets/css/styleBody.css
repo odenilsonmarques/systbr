@@ -1,6 +1,10 @@
-.contentBody{
-    background-color:none; 
-    margin-top: 150px;
+.logo{
+    margin-top: 20px;
+}
+.article{
+    background-color:#1E90FF; 
+    border:none;
+    margin-top: 20px;
 }
 .contatos{
     border:1px solid thistle;
@@ -12,9 +16,10 @@
     font-size:50px;
     margin-top: 2%;
 }
-h2{
-    color:lightskyblue;
+h2, h4{
+    color:#1E90FF;
 }
+
 th{
     font-size: 17px;
     color:#1E90FF;
