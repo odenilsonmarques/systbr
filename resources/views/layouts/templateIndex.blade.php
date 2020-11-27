@@ -11,7 +11,14 @@
         <link rel="stylesheet" href="{{('assets/css/estiloFooter.css')}}">
     </head>
     <body>
-        <header>      
+        <header> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <img src="{{('assets/img/brasao.png')}}" style="margin-width:none;height:none"><hr>
+                    </div>
+                </div>   
+            </div>
         </header>
         <article>
             <div class="container">

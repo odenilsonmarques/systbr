@@ -1,6 +1,4 @@
-.logo{
-    margin-top: 20px;
-}
+/*
 .article{
     background-color:#1E90FF; 
     border:none;
@@ -14,12 +12,31 @@
 .glyphicon{
     color:lightskyblue;
     font-size:50px;
-    margin-top: 2%;
+   
 }
-h2, h4{
-    color:#1E90FF;
+*/
+hr{
+    border:1px solid #1E90FF;
+}
+h3{
+    color:#FFF;
 }
 
+.operacaoTapaBuraco{
+    background-color:#166ba2;
+    border:none;
+}
+
+.operacaoUsuario{
+    background-color:#166ba2; 
+    border:none;
+}
+
+.operacaoTapaBuraco .operacaoUsuario img{
+    margin-top: 20px;
+    margin-bottom: 240px;
+}
+/*
 th{
     font-size: 17px;
     color:#1E90FF;
@@ -43,12 +60,15 @@ li{
 .contatos a{
     text-decoration: none;
 }
+*/
 
-p{
-    color:dodgerblue;
-    font-size:22px;
+.texto{
+    color:#FFF;
     font-weight: bolder;
+    margin-top: 50px;
+    border:none;
 }
+/*
 #msg{
     color:#228B22;
     font-size:20px;
@@ -62,4 +82,4 @@ p{
     font-size: 18px;
     color: #FFF;
 }
-
+*/
