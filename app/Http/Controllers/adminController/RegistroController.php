@@ -16,18 +16,20 @@ class RegistroController extends Controller
             'descricao'=>['required','string','min:20','max:150'],
             'anexo'=>['required','file'],
         ]);
-        if($request->hasFile('anexo') && $request->anexo->isValid()){
-            $anexo = $request->file('anexo')->store('imagens');
-        }
         $titulo = $request->input('titulo');
         $descricao = $request->input('descricao');
         $anexo = $request->input('anexo');
+
+        if($request->hasFile('anexo') && $request->anexo->isValid()){
+            $anexo = $request->file('anexo')->store('imagens');
+        }
+
         $data = new Registro();
         $data->titulo = $titulo;
         $data->descricao = $descricao;
         $data->anexo = $anexo;
         $data->save();
-        return redirect()->route('cadastro.add');   
+        return redirect()->route('lista.list');   
     }
     public function list(){
         $lista = Registro::All();

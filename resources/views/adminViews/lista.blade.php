@@ -19,7 +19,9 @@
                             <tr>
                                 <td>{{$item->titulo}}</td>
                                 <td>{{$item->descricao}}</td>
-                                <td>{{$item->anexo}}</td>
+                                @if($item->anexo)
+                                    <td><img src="{{url("storage/{$item->anexo}")}}" ></td>
+                                @endif
                                 <td>
                                     <a href="#" class="btn-primary btn-sm">Editar</a>
                                     <a href="#" onclick="return confirm('DESEJA CONFIRMAR A EXCLUSÃO ?')" class="btn-danger btn-sm">Excluir</a>
