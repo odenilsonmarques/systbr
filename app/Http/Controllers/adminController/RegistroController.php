@@ -29,7 +29,8 @@ class RegistroController extends Controller
         $data->descricao = $descricao;
         $data->anexo = $anexo;
         $data->save();
-        return redirect()->route('lista.list');   
+        return redirect()->route('lista.list') 
+        ->with('mensagemCadastro', 'Publicado com sucesso!');
     }
     public function list(){
         $lista = Registro::all();
