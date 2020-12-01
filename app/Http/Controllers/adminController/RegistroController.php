@@ -16,8 +16,8 @@ class RegistroController extends Controller
             'descricao'=>['required','string','min:20','max:150'],
             'anexo'=>['required','file'],
         ]);
-        $titulo = $request->input('titulo');
-        $descricao = $request->input('descricao');
+        $titulo = strtoupper($request->input('titulo'));
+        $descricao = strtoupper($request->input('descricao'));
         $anexo = $request->input('anexo');
 
         if($request->hasFile('anexo') && $request->anexo->isValid()){
@@ -32,7 +32,7 @@ class RegistroController extends Controller
         return redirect()->route('lista.list');   
     }
     public function list(){
-        $lista = Registro::All();
+        $lista = Registro::all();
         return view('adminViews.lista',['lista'=>$lista]);
     }
 }

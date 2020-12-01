@@ -9,7 +9,6 @@ h3{
     background-color:#4682B4;
     border:none;
     text-align: center;
-    
 }
 .operacaoUsuario{
     background-color:#166ba2; 
@@ -19,35 +18,24 @@ h3{
 .operacaoTapaBuraco .operacaoUsuario img{
     margin-top: 20px;
 }
-
 .operacaoUsuario a{
     text-decoration: none;
 }
-
 .operacaoUsuario:hover{
     background-color:#2F4F4F;
 }
-
 .operacaoTapaBuraco:hover{
     background-color:#2F4F4F;
 }
 .inforFooter{
     margin-top: 25px;
     color:#1E90FF;
-
+}
+b{
+    font-size: 17px;
 }
 /*
-th{
-    font-size: 17px;
-    color:#1E90FF;
-}
-th .glyphicon{
-    font-size: 15px;
-    color:#1E90FF;
-}
-tr{
-    font-size: 17px;
-}
+
 li{
     font-size: 17px;
 }
@@ -68,15 +56,19 @@ li{
     margin-top: 50px;
     border:none;
 }
+
+.lista img{
+    width:15%;
+    border-radius: 10px;
+    border:1px solid #1E90FF;
+}
 /*
 #msg{
     color:#228B22;
     font-size:20px;
     font-weight: bolder;
 }
-.imgAgenda img{
-    width:30%;
-}
+
 
 .novoContato .glyphicon{
     font-size: 18px;
