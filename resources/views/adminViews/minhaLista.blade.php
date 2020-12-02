@@ -1,24 +1,23 @@
 @extends('layouts.templateIndex')
-@section('title','registros')
+@section('title','minhas publicações')
 @section('content')
 <div class="row">
     <div class="pane panel-primary" style="margin-top:20px">
-        @if(session('mensagemCadastro'))
+        @if(session('mensagemExclusao'))
             <div class="alert alert-success alert-dismissible fade in text-center">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <p id="msg">{{session('mensagemCadastro')}}</p>
+                <p id="msg">{{session('mensagemExclusao')}}</p>
             </div>
          @endif
         <div class="panel-heading text-center"><h3><strong>PUBLICAÇÕES</strong></h3></div><br/>
         <div class="row lista">
-            @foreach ($lista as $item)
+            @foreach ($minhaLista as $item)
                 <div class="col-lg-12">
                     <b>TITULO: </b>{{$item->titulo}}<br/>
                     <b>DESCRIÇÃO: </b>{{$item->descricao}}<br/>
                     <b>ANEXO</b><br><img src="{{url("storage/{$item->anexo}")}}"><br/><br/>
-                    <button  class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"><br>curtir</span></button>
-                    <button  class="btn btn-info"><span class="glyphicon glyphicon-comment"><br>comentar</span></button>
-                    <button  class="btn btn-success"><span class="glyphicon glyphicon-check"><br>feito</span></button><hr>
+                    <a href="" class="btn btn-primary btn-sm">Editar</a>
+                    <a href="{{route('deletaMinhaPublicacao.del',[$item->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('CONFIRMAR EXCLUSÃO?')">Excluir</a><hr>
                 </div>
             @endforeach
         </div>

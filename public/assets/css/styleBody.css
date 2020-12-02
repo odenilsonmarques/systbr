@@ -34,12 +34,14 @@ h3{
 b{
     font-size: 17px;
 }
+.panel-heading{
+    text-align: center;
+    border-radius:5px;
+}
 /*
-
 li{
     font-size: 17px;
 }
-
 .novoContato a{
     color:#FFF;
     font-size: 15px;
@@ -49,14 +51,12 @@ li{
     text-decoration: none;
 }
 */
-
 .texto{
     color:#FFF;
     font-weight: bolder;
     margin-top: 50px;
     border:none;
 }
-
 .lista img{
     width:15%;
     border-radius: 10px;
@@ -68,8 +68,6 @@ li{
     font-size:20px;
     font-weight: bolder;
 }
-
-
 .novoContato .glyphicon{
     font-size: 18px;
     color: #FFF;

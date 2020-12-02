@@ -36,4 +36,13 @@ class RegistroController extends Controller
         $lista = Registro::all();
         return view('adminViews.lista',['lista'=>$lista]);
     }
+    public function myList(){
+        $minhaLista =  Registro::all();
+            return view('adminViews.minhaLista',['minhaLista'=>$minhaLista]);
+    }
+    public function del($id){
+        Registro::find($id)->delete();
+        return redirect()->route('minhaLista.myList')
+        ->with('mensagemExclusao', 'Publicação excluída com sucesso!');
+    }
 }

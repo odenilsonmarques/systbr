@@ -16,6 +16,9 @@ Route::post('/cadastro','adminController\RegistroController@addAction');
 
 Route::get('/lista','adminController\RegistroController@list')->name('lista.list');
 
+Route::get('/minhaLista','adminController\RegistroController@myList')->name('minhaLista.myList');
+Route::get('/deletaMinhaPublicacao/{id}','adminController\RegistroController@del')->name('deletaMinhaPublicacao.del');
+
 Route::get('/', function () {
     return view('adminViews.index');
 });
