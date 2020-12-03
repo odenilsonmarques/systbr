@@ -11,14 +11,22 @@
 |
 */
 
-Route::get('/cadastro','adminController\RegistroController@add')->name('cadastro.add');
+Route::get('/cadastro','adminController\RegistroController@add')->name('cadastro.add')->middleware('auth');
 Route::post('/cadastro','adminController\RegistroController@addAction');
 
-Route::get('/lista','adminController\RegistroController@list')->name('lista.list');
+Route::get('/lista','adminController\RegistroController@list')->name('lista.list')->middleware('auth');
 
-Route::get('/minhaLista','adminController\RegistroController@myList')->name('minhaLista.myList');
-Route::get('/deletaMinhaPublicacao/{id}','adminController\RegistroController@del')->name('deletaMinhaPublicacao.del');
+Route::get('/minhaLista','adminController\RegistroController@myList')->name('minhaLista.myList')->middleware('auth');
+Route::get('/deletaMinhaPublicacao/{id}','adminController\RegistroController@del')->name('deletaMinhaPublicacao.del')->middleware('auth');
+
+Route::get('/editaMinhaLista/{id}','adminController\RegistroController@edit')->name('editaMinhaLista.edit')->middleware('auth');
+Route::post('/editaMinhaLista/{id}','adminController\RegistroController@editAction');
 
 Route::get('/', function () {
     return view('adminViews.index');
 });
+
+Auth::routes();
+
+//rota chmamada apos a autenticação
+//Route::get('/home', 'HomeController@index')->name('home');

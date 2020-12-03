@@ -28,6 +28,8 @@ CREATE TABLE IF NOT EXISTS `registros` (
 
 SELECT *FROM registros;
 
+ALTER TABLE registros AUTO_INCREMENT = 1; 
+
 -- Exportação de dados foi desmarcado.
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

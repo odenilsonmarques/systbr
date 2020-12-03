@@ -18,7 +18,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            //quando o usuario ja estiver logado e tentar acessar o login, ele vai ser redirecionado para lista
+            return redirect('/lista');
         }
 
         return $next($request);

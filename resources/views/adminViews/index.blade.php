@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-4 text-center operacaoUsuario">
-            <a href="#">
+            <a href="{{route('register')}}">
                 <h3><strong class="texto">Quero me Cadastrar</strong></h3>
                 <img src="{{('assets/img/user2.png')}}"><br/><br/><br/>
             </a>
@@ -17,7 +17,7 @@
         </div>
 
         <div class="col-lg-4 text-center operacaoUsuario">
-            <a href="#">
+            <a href="{{route('login')}}">
                 <h3><strong class="texto">Sou Cadastrado</strong></h3>
                 <img src="{{('assets/img/users3.png')}}"><br/><br/><br/>
             </a>

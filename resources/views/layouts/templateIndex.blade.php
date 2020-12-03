@@ -5,17 +5,17 @@
         <title>@yield('title')</title>
         <meta name="description" content="@yield('description')">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{('assets/css/bootstrap.min.css')}}">
-        <link rel="stylesheet" href="{{('assets/css/styleHeader.css')}}">
-        <link rel="stylesheet" href="{{('assets/css/styleBody.css')}}">
-        <link rel="stylesheet" href="{{('assets/css/styleFooter.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/styleHeader.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/styleBody.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/styleFooter.css')}}">
     </head>
     <body>
         <header> 
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <img src="{{('assets/img/brasao.png')}}" style="margin-width:none;height:none"><hr>
+                        <img src="{{asset('assets/img/brasao.png')}}" style="margin-width:none;height:none"><hr>
                     </div>
                 </div>   
             </div>

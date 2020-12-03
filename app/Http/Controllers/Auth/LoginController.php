@@ -25,7 +25,9 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+     //depois que for feito login é chamado a view lista.blade.php
+    protected $redirectTo = '/lista';
 
     /**
      * Create a new controller instance.

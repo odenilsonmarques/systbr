@@ -28,7 +28,9 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+     //depois que cadastrar vai ser chamado a view lista.blade.php
+    protected $redirectTo = '/lista';
 
     /**
      * Create a new controller instance.
