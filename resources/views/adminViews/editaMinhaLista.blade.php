@@ -1,4 +1,4 @@
-@extends('layouts.templateIndex')
+@extends('layouts.template')
 @section('title','publicar')
 @section('content')
     <div class="row">

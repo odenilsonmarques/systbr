@@ -1,9 +1,8 @@
-@extends('layouts.templateIndex')
+@extends('layouts.template')
 @section('title','publicar')
 @section('content')
     <div class="row">
         <div class="pane panel-primary" style="margin-top:20px">
-            <div class="panel-heading text-center" style="border-radius:5px"><h3><strong>CADASTRO DE PUBLICAÇÃO</strong></h3></div><br/>
             <div class="col-12-lg">
                 @if($errors->any())
                     <div class="alert alert-danger">
