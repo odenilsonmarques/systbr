@@ -1,5 +1,5 @@
 @extends('layouts.templateIndex')
-@section('title','index')
+@section('title','Home')
 @section('content')
     <div class="row">
         <div class="col-lg-4 text-center operacaoUsuario">

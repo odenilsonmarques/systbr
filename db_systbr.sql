@@ -26,9 +26,25 @@ CREATE TABLE IF NOT EXISTS `registros` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=UTF8MB4;
 
+
+CREATE TABLE users(
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR (100) NOT NULL, 
+email VARCHAR (200) NOT NULL,
+password VARCHAR (100) NOT NULL,
+remember_token VARCHAR (100) NULL
+);
+
+
+
 SELECT *FROM registros;
 
 ALTER TABLE registros AUTO_INCREMENT = 1; 
+
+SELECT *FROM users;
+
+
+
 
 -- Exportação de dados foi desmarcado.
 

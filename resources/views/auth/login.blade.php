@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{route('login') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -38,11 +38,13 @@
                             </div>
                         </div>
 
-                        
-
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary" style="font-size:17px;background-color:#FFF;color:#4682B4;font-weight: bolder">
+                                <button  class="btn btn-danger" >
+                                    <a href="{{route('home.index')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
+                                </button>
+
+                                <button type="submit" class="btn btn-success" style="font-size:17px;color:#FFF;font-weight: ">
                                     {{ __('Entrar') }}
                                 </button>
                             </div>

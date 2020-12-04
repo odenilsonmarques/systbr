@@ -4413,6 +4413,7 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+ 
 }
 
 .nav-link {
@@ -4507,6 +4508,7 @@ input[type=button].btn-block {
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
+  
 }
 
 .navbar .container,
@@ -4519,6 +4521,7 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+
 }
 
 .navbar-brand {
@@ -4529,6 +4532,7 @@ input[type=button].btn-block {
   font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
+  font-size:25px;
 }
 
 .navbar-brand:hover,
