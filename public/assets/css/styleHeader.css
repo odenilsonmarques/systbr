@@ -2,6 +2,7 @@
     background-color:#4682B4;
     z-index: 9999;
     font-family: Montserrat, sans-serif;
+
 }
 .navbar .navbar-brand{
     font-size: 26px;
@@ -20,22 +21,17 @@
     margin-right: 30px;
 }
 
-.navbar li a:hover{
-    color:#FFF;
-    background-color: #4682B4;
+.navbar ul li a:hover{
+    color:#FFF; 
+    background-color:#4682B4;
 }
-.navbar-default .navbar-nav > li > a:hover{
-    border-radius: 5px;
-    border:1px solid red;
-}
-.navbar-default .navbar-nav > li > a{
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.dropdown-menu  {
+
+.dropdown-menu {
     background-color:#4682B4;
     margin-right: 13px;
 }
 
-
+.dropdown-menu li a{
+    font-size:16px
+}
 

@@ -41,7 +41,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button  class="btn btn-danger" >
-                                    <a href="{{route('home.index')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
+                                    <a href="{{url('/')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
                                 </button>
 
                                 <button type="submit" class="btn btn-success" style="font-size:17px;color:#FFF;font-weight: ">

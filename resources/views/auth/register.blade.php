@@ -9,7 +9,7 @@
                     <h3><strong>Sistema de Registro de Buraco</strong></h3><hr style="border:1px solid #fff">
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -28,10 +28,8 @@
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
-
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
                                 @error('email')
                                     <span class="invalid-feedback" role="alert"  style="color:#FFF;font-size:15px">
                                         <strong>{{ $message }}</strong>
@@ -65,7 +63,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button  class="btn btn-danger" >
-                                    <a href="{{route('home.index')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
+                                    <a href="{{url('/')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
                                 </button>
                                 <button type="submit" class="btn btn-success" style="font-size:17px;color:#FFF;">
                                     {{ __('Registrar') }}

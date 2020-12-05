@@ -4,6 +4,7 @@ namespace App\Http\Controllers\adminController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Registro;
+use App\User;
 
 class RegistroController extends Controller
 {
@@ -27,6 +28,8 @@ class RegistroController extends Controller
         $data->titulo = $titulo;
         $data->descricao = $descricao;
         $data->anexo = $anexo;
+         //SALVANDO O ID DO USUARIO, PARA ISSO É PRECISO PEGAR ID DO USUARIO LOGADO, ANTES SE CHAMA A CLASSE AUTH
+        $data->user_id = auth()->user()->id;
         $data->save();
         return redirect()->route('lista.list') 
         ->with('mensagemCadastro', 'Publicado com sucesso!');
@@ -37,9 +40,9 @@ class RegistroController extends Controller
         return view('adminViews.lista',['lista'=>$lista]);
     }
 
-    public function myList(){
-        $minhaLista =  Registro::all();
-            return view('adminViews.minhaLista',['minhaLista'=>$minhaLista]);
+    public function myList(Registro $registro){
+        $registros =  $registro->where('user_id', auth()->user()->id)->get();
+        return view('adminViews.minhaLista',['registros'=>$registros]);
     }
 
     public function edit($id){
