@@ -26,7 +26,21 @@
                                 <input type="text" name="titulo" value="{{old('titulo')}}" class="form-control"  autofocus="" placeholder="Digite um titulo">
                             </div>
                         </div>
-                    </div>   
+                    </div>  
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="bairro" class="text-primary">BAIRRO</label><br/>
+                                <input type="text" name="bairro" value="{{old('bairro')}}" class="form-control"  autofocus="" placeholder="Informe o bairro">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="rua" class="text-primary">RUA</label><br/>
+                                <input type="text" name="rua" value="{{old('rua')}}" class="form-control"  autofocus="" placeholder="Informe a rua">
+                            </div>
+                        </div>
+                    </div> 
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
@@ -47,7 +61,7 @@
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-lg-12 glyphiconIcon">
-                            <a href="" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="{{url('/home')}}" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
                             <button type="submit" class="btn btn-success"><strong>PUBLICAR</strong> <span class="glyphicon glyphicon-ok"></span></button>
                         </div>
                     </div>

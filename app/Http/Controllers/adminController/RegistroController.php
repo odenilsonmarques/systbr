@@ -5,20 +5,24 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Registro;
 use App\User;
+use App\Comentario;
 
 class RegistroController extends Controller
 {
     public function add(){
         return view('adminViews.cadastro');
     }
-
     public function addAction(Request $request){
         $request->validate([
             'titulo'=>['required','string','min:10','max:30'],
+            'bairro'=>['required','string','min:5','max:20'],
+            'rua'=>['required','string','min:4','max:25'],
             'descricao'=>['required','string','min:20','max:150'],
             'anexo'=>['required','file'],
         ]);
         $titulo = strtoupper($request->input('titulo'));
+        $bairro = strtoupper($request->input('bairro'));
+        $rua = strtoupper($request->input('rua'));
         $descricao = strtoupper($request->input('descricao'));
         $anexo = $request->input('anexo');
         if($request->hasFile('anexo') && $request->anexo->isValid()){
@@ -26,6 +30,8 @@ class RegistroController extends Controller
         }
         $data = new Registro();
         $data->titulo = $titulo;
+        $data->bairro = $bairro;
+        $data->rua = $rua;
         $data->descricao = $descricao;
         $data->anexo = $anexo;
          //SALVANDO O ID DO USUARIO, PARA ISSO É PRECISO PEGAR ID DO USUARIO LOGADO, ANTES SE CHAMA A CLASSE AUTH
@@ -57,17 +63,16 @@ class RegistroController extends Controller
     public function editAction(Request $request, $id){
         $request->validate([
             'titulo'=>['required','string','min:10','max:30'],
+            'bairro'=>['required','string','min:5','max:20'],
+            'rua'=>['required','string','min:4','max:25'],
             'descricao'=>['required','string','min:20','max:150'],
-            'anexo'=>['required','file'],
         ]);
         $titulo = strtoupper($request->input('titulo'));
+        $bairro = strtoupper($request->input('bairro'));
+        $rua = strtoupper($request->input('rua'));
         $descricao = strtoupper($request->input('descricao'));
-        $anexo = $request->input('anexo');
-        if($request->hasFile('anexo') && $request->anexo->isValid()){
-            $anexo = $request->file('anexo')->store('imagens');
-        }
         Registro::find($id)
-        ->update(['titulo'=>$titulo,'descricao'=>$descricao,'anexo'=>$anexo]);
+        ->update(['titulo'=>$titulo,'bairro'=>$bairro,'rua'=>$rua,'descricao'=>$descricao]);
         return redirect()->route('minhaLista.myList')
         ->with('mensagemEdicao', 'Publicação alterada com sucesso!');
     }

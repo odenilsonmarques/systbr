@@ -22,8 +22,8 @@ Route::get('/deletaMinhaPublicacao/{id}','adminController\RegistroController@del
 Route::get('/editaMinhaLista/{id}','adminController\RegistroController@edit')->name('editaMinhaLista.edit')->middleware('auth');
 Route::post('/editaMinhaLista/{id}','adminController\RegistroController@editAction');
 
-
-//Route::get('/home','adminController\HomeController@index')->name('home.index');
+Route::post('/lista','adminController\ComentarioController@addComentAction');
+//Route::get('/lista','adminController\ComentarioController@listComent')->name('lista.list');
 
 Auth::routes();
 

@@ -31,7 +31,7 @@
                                 <!-- Authentication Links -->
                                 <li class="dropdown">
                                     <a  class="dropdown-toggle" data-toggle="dropdown" href="#" >
-                                        Olá, {{ Auth::user()->name }} <span class="caret"></span>
+                                        Olá, {{ Auth::user()->name }} <span class="glyphicon glyphicon-user"></span> <span class="caret"></span>
                                     </a>
                                     <ul class="dropdown-menu">
                                         <li><a href="{{route('lista.list')}}"><span class="glyphicon glyphicon-th"></span> Publicações </a></li>

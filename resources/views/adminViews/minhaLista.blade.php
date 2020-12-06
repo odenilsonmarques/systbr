@@ -18,7 +18,10 @@
             @endif
             @foreach ($registros as $registro)
                 <b>TITULO: </b>{{$registro->titulo}}<br/>
+                <b>BAIRRO: </b>{{$registro->bairro}} <br/>
+                <b>RUA: </b>{{$registro->rua}}<br/>
                 <b>DESCRIÇÃO: </b>{{$registro->descricao}}<br/>
+                <b>DATA E HORA: </b>{{Carbon\Carbon::parse($registro ->data_publicacao)->format('d/m/Y \A\S H:i:s')}}<br/>
                 <b>ANEXO</b><br><img src="{{url("storage/{$registro->anexo}")}}"><br/><br/>
                 <a href="{{route('editaMinhaLista.edit',[$registro->id])}}" class="btn btn-primary btn-sm">Editar</a>
                 <a href="{{route('deletaMinhaPublicacao.del',[$registro->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('CONFIRMAR EXCLUSÃO?')">Excluir</a><hr>

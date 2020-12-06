@@ -35,6 +35,11 @@ password VARCHAR (100) NOT NULL,
 remember_token VARCHAR (100) NULL
 );
 
+CREATE TABLE comentarios(
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+cometario VARCHAR (200)
+);
+
 
 
 SELECT *FROM registros;
@@ -42,6 +47,10 @@ SELECT *FROM registros;
 ALTER TABLE registros AUTO_INCREMENT = 1; 
 
 SELECT *FROM users;
+
+SELECT *FROM comentarios;
+
+DESC comentarios;
 
 
 
