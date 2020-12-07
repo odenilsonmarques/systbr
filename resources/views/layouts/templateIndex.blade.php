@@ -12,16 +12,16 @@
     </head>
     <body>
         <header> 
-            <div class="container">
-                <div class="row">
+            <div class="container-fluid">
+                <div class="row imgTopo">
                     <div class="col-lg-12 text-center">
-                        <img src="{{asset('assets/img/brasao.png')}}" style="margin-width:none;height:none"><hr>
+                        <img src="{{asset('assets/img/brasao.png')}}" style="margin-width:none;height:none">
                     </div>
                 </div>   
             </div>
         </header>
         <article>
-            <div class="container">
+            <div class="container-fluid jbotom">
                 @yield('content')
             </div>
         </article>

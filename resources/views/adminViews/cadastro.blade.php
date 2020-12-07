@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="pane panel-primary" style="margin-top:20px">
-            <div class="col-12-lg">
+            <div class="col-lg-12">
                 @if($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -61,7 +61,7 @@
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-lg-12 glyphiconIcon">
-                            <a href="{{url('/home')}}" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="{{url('/lista')}}" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
                             <button type="submit" class="btn btn-success"><strong>PUBLICAR</strong> <span class="glyphicon glyphicon-ok"></span></button>
                         </div>
                     </div>

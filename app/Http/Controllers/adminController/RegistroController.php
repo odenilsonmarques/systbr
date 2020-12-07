@@ -42,7 +42,7 @@ class RegistroController extends Controller
     }
 
     public function list(){
-        $lista = Registro::all();
+        $lista = Registro::all()->sortByDesc('data_publicacao');
         return view('adminViews.lista',['lista'=>$lista]);
     }
 

@@ -7,7 +7,8 @@
             <div class="card">
                 <div class="row">
                     <div class="col-lg-12 text-center"><br/>
-                        <h3><strong>Sistema de Registro de Buraco</strong></h3><hr style="border:1px solid #fff">
+                        <h3><strong>Sistema de Registro de Buraco</strong></h3>
+                        <img src="{{('assets/img/worker3.png')}}"><hr style="border:1px solid #fff">
                     </div>
                 </div>
                 <div class="card-body">
@@ -53,6 +54,15 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><br/>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="color:#1E90FF">
+                    Todos os direito reservados || Prefeitura de São Luís - MA</a><br><br>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
 @endsection

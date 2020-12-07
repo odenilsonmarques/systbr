@@ -12,49 +12,44 @@
     </head>
     <body>
         <header> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <img src="{{asset('assets/img/brasao.png')}}" style="margin-width:none;height:none"><hr>
-                    </div>
-                </div>  
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-                            
-                            <div class="navbar-header">
-                                <a class="navbar-brand" href="{{url('home')}}">SystRB</a>
-                            </div>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
 
-                            <!-- Right Side Of Navbar -->
-                            <ul class="nav navbar-nav navbar-right">
-                                <!-- Authentication Links -->
-                                <li class="dropdown">
-                                    <a  class="dropdown-toggle" data-toggle="dropdown" href="#" >
-                                        Olá, {{ Auth::user()->name }} <span class="glyphicon glyphicon-user"></span> <span class="caret"></span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="{{route('lista.list')}}"><span class="glyphicon glyphicon-th"></span> Publicações </a></li>
-                                        <li><a href="{{route('minhaLista.myList')}}"><span class="glyphicon glyphicon-th-list"></span> Minhas publicações</a></li>
-                                        <li><a href="{{route('cadastro.add')}}"><span class="glyphicon glyphicon-plus"></span> Cadastrar publicação</a></li>
-                                        <li><a href="{{route('logout')}}"
-                                            onclick="event.preventDefault(); 
-                                            document.getElementById('logout-form').submit();">
-                                            <span class="glyphicon glyphicon-off"></span> {{ __('Sair')}} 
-                                        </a></li>
-                                        <form id="logout-form" action="{{route('logout') }}" method="POST">
-                                            @csrf
-                                        </form>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                          <a class="navbar-brand" href="{{route('lista.list')}}">SystRB</a>
                     </div>
-                </div> 
-            </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{route('lista.list')}}"><span class="glyphicon glyphicon-th"></span> Publicações </a></li>
+                            <li><a href="{{route('minhaLista.myList')}}"><span class="glyphicon glyphicon-th-list"></span> Minhas publicações</a></li>
+                            <li class="dropdown">
+                                <a  class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                                    Olá, {{ Auth::user()->name }} <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{route('cadastro.add')}}"><span class="glyphicon glyphicon-plus"></span> Cadastrar publicação</a></li>
+                                    <li><a href="{{route('logout')}}"
+                                        onclick="event.preventDefault(); 
+                                        document.getElementById('logout-form').submit();">
+                                        <span class="glyphicon glyphicon-off"></span> {{ __('Sair')}} 
+                                    </a></li>
+                                    <form id="logout-form" action="{{route('logout') }}" method="POST">
+                                        @csrf
+                                    </form>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav><br/><br/>
         </header>
         <article>
-            <div class="container">
+            <div class="container contentBody">
                 @yield('content')
             </div>
         </article>

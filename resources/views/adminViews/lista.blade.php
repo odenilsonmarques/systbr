@@ -17,7 +17,7 @@
                 <b>RUA: </b>{{$item->rua}}<br/>
                 <b>DESCRIÇÃO: </b>{{$item->descricao}}<br/>
                 <b>DATA E HORA: </b>{{Carbon\Carbon::parse($item ->data_publicacao)->format('d/m/Y \A\S H:i:s')}}<br/>
-                <b>ANEXO</b><br><img src="{{url("storage/{$item->anexo}")}}"><br/><br/>
+                <b>ANEXO:</b><br><img src="{{url("storage/{$item->anexo}")}}" class="img-responsive"><br/><br/>
                 <button  class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"><br>curtir</span></button>
                 <button  class="btn btn-info"><span class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal"><br>comentar</span></button>    
                 <button  class="btn btn-success"><span class="glyphicon glyphicon-check"><br>feito</span></button><hr>

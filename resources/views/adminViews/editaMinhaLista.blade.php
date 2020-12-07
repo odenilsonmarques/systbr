@@ -53,7 +53,7 @@
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-lg-12 glyphiconIcon">
-                            <a href="" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
+                            <a href="{{route('minhaLista.myList')}}" class="btn btn-danger"><strong>CANCELAR</strong> <span class="glyphicon glyphicon-remove"></span></a>
                             <button type="submit" class="btn btn-success"><strong>PUBLICAR</strong> <span class="glyphicon glyphicon-ok"></span></button>
                         </div>
                     </div>
