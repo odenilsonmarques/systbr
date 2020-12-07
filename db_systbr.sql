@@ -11,7 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
 -- Copiando estrutura do banco de dados para db_systbr
 CREATE DATABASE IF NOT EXISTS `db_systbr` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `db_systbr`;
@@ -41,15 +40,16 @@ cometario VARCHAR (200)
 );
 
 
+SELECT *FROM users;
+ALTER TABLE users AUTO_INCREMENT = 1;
+DESC users;
 
 SELECT *FROM registros;
-
 ALTER TABLE registros AUTO_INCREMENT = 1; 
-
-SELECT *FROM users;
+DESC registros;
 
 SELECT *FROM comentarios;
-
+ALTER TABLE comentarios AUTO_INCREMENT = 1; 
 DESC comentarios;
 
 

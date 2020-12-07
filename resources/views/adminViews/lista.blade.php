@@ -2,6 +2,15 @@
 @section('title','registros')
 @section('content')
 <div class="row lista">
+    <div class="row ">
+        <div class="col-lg-12">
+            <form method="GET" action="{{route('listaBusca.pesquisar')}}" class="form-inline">
+                @csrf
+                <input type="text" name="search" class="form-control" placeholder="Informe o titulo, bairro" autofocus style="min-width:1040px;"/>
+                <button type="submit" class="btn btn-primary"> BUSCAR</button>
+            </form>
+        </div>
+    </div><br/>
     <div class="col-lg-12">
         <div class="pane panel-primary" style="margin-top:20px">
             @if(session('mensagemCadastro'))
@@ -10,13 +19,12 @@
                     <p id="msg">{{session('mensagemCadastro')}}</p>
                 </div>
             @endif
-            
             @foreach ($lista as $item)
-                <b>TITULO: </b>{{$item->titulo}}<br/>
-                <b>BAIRRO: </b>{{$item->bairro}} <br/>
-                <b>RUA: </b>{{$item->rua}}<br/>
-                <b>DESCRIÇÃO: </b>{{$item->descricao}}<br/>
-                <b>DATA E HORA: </b>{{Carbon\Carbon::parse($item ->data_publicacao)->format('d/m/Y \A\S H:i:s')}}<br/>
+                <b>TITULO: </b><b class="info">{{$item->titulo}}</b><br/>
+                <b>DESCRIÇÃO: </b><b class="info">{{$item->descricao}}</b><br/>
+                <b>BAIRRO: </b><b class="info">{{$item->bairro}}</b><br/>
+                <b>RUA: </b><b class="info">{{$item->rua}}</b><br/>
+                <b>DATA E HORA: </b><b class="info">{{Carbon\Carbon::parse($item ->data_publicacao)->format('d/m/Y \A\S H:i:s')}}</b><br/>
                 <b>ANEXO:</b><br><img src="{{url("storage/{$item->anexo}")}}" class="img-responsive"><br/><br/>
                 <button  class="btn btn-primary"><span class="glyphicon glyphicon-thumbs-up"><br>curtir</span></button>
                 <button  class="btn btn-info"><span class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal"><br>comentar</span></button>    
@@ -24,7 +32,6 @@
             @endforeach
         </div>
     </div>   
-    
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">

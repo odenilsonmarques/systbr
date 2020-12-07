@@ -1,10 +1,8 @@
-
 hr{
     border:1px solid #1E90FF;
 }
 h3{
-    color:#FFF;
-    
+    color:#FFF;    
 }
 .operacaoTapaBuraco{
     background-color:#4682B4;
@@ -39,7 +37,6 @@ b{
     text-align: center;
     border-radius:5px;
 }
-
 .texto{
     color:#FFF;
     font-weight: bolder;
@@ -51,10 +48,15 @@ b{
     border-radius: 10px;
     margin-top: 10px;
 }
-
 .jbotom{
     background-color:#4682B4;
 }
 .contentBody{
     margin-top: 70px;
+}
+b{
+    color: #166ba2;
+}
+.info{
+    color: #111;
 }

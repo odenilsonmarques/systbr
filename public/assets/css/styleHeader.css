@@ -18,26 +18,21 @@
     margin-bottom: 15px;
     margin-right: 30px;
 }
-
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     font-size: 16px;
 }
-
 .dropdown-menu {
     background-color:#4682B4;
     margin-right: 13px;
 }
-
 .dropdown-menu li a{
     font-size:16px
 }
-
 .imgTopo{
-    margin-top: 100px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-
 .topo{
     background-color:#FFF;
 }

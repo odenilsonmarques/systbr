@@ -82,4 +82,10 @@ class RegistroController extends Controller
         return redirect()->route('minhaLista.myList')
         ->with('mensagemExclusao', 'Publicação excluída com sucesso!');
     }
+
+    public function pesquisar(Request $request){
+        $search = filter_input(INPUT_GET,'search');
+        $lista = Registro::select()->where('bairro','like',''.$search.'%')->get();
+        return view('adminViews.lista',['lista'=>$lista]);
+    }
 }

@@ -15,7 +15,7 @@
             <div class="container-fluid">
                 <div class="row imgTopo">
                     <div class="col-lg-12 text-center">
-                        <img src="{{asset('assets/img/brasao.png')}}" style="margin-width:none;height:none">
+                        <img src="{{asset('assets/img/brasao.png')}}">
                     </div>
                 </div>   
             </div>

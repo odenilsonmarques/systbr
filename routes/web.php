@@ -25,6 +25,8 @@ Route::post('/editaMinhaLista/{id}','adminController\RegistroController@editActi
 Route::post('/lista','adminController\ComentarioController@addComentAction');
 //Route::get('/lista','adminController\ComentarioController@listComent')->name('lista.list');
 
+Route::any('/listaBusca','adminController\RegistroController@pesquisar')->name('listaBusca.pesquisar')->middleware('auth');
+
 Auth::routes();
 
 //rota chmamada apos a autenticação

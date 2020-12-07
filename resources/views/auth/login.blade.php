@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -14,7 +13,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{route('login') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right" autofocus="">{{ __('E-mail') }}</label>
                             <div class="col-md-6">
@@ -26,7 +24,6 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Senha') }}</label>
                             <div class="col-md-6">
@@ -38,13 +35,11 @@
                                 @enderror
                             </div>
                         </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button  class="btn btn-danger" >
                                     <a href="{{url('/')}}" style="font-size:17px;background-color:#;color:#FFF;text-decoration:none">{{ __('Cancelar') }}</a> 
                                 </button>
-
                                 <button type="submit" class="btn btn-success" style="font-size:17px;color:#FFF;font-weight: ">
                                     {{ __('Entrar') }}
                                 </button>

@@ -14,7 +14,6 @@
         <header> 
             <nav class="navbar navbar-default navbar-fixed-top">
                 <div class="container">
-
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                             <span class="icon-bar"></span>
@@ -27,12 +26,12 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{{route('lista.list')}}"><span class="glyphicon glyphicon-th"></span> Publicações </a></li>
                             <li><a href="{{route('minhaLista.myList')}}"><span class="glyphicon glyphicon-th-list"></span> Minhas publicações</a></li>
+                            <li><a href="{{route('cadastro.add')}}"><span class="glyphicon glyphicon-plus"></span> Nova publicação</a></li>
                             <li class="dropdown">
                                 <a  class="dropdown-toggle" data-toggle="dropdown" href="#" >
                                     Olá, {{ Auth::user()->name }} <span class="glyphicon glyphicon-user"></span><span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="{{route('cadastro.add')}}"><span class="glyphicon glyphicon-plus"></span> Cadastrar publicação</a></li>
                                     <li><a href="{{route('logout')}}"
                                         onclick="event.preventDefault(); 
                                         document.getElementById('logout-form').submit();">
